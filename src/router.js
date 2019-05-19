@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Corewar from "./views/Corewar_menu.vue";
+import Corewar from "./views/CorewarMenu.vue";
 import Hello from "./components/HelloWorld.vue";
 
 Vue.use(Router);

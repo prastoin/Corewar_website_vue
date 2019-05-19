@@ -69,18 +69,17 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "step_1"
+  name: "Step1"
 };
 </script>
 
-<style>
+<style scoped>
 header {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 header > p {

@@ -1,11 +1,15 @@
 <template>
   <div>
-    <step :step_1="1"></step>
+    <Step1></Step1>
+    <Step2></Step2>
+    <Step3></Step3>
   </div>
 </template>
 
 <script>
-import step_1 from "./step_1.vue";
+import Step1 from "../components/Step1.vue";
+import Step2 from "../components/Step2.vue";
+import Step3 from "../components/Step3.vue";
 // @ is an alias to /src
 export default {
   name: "corewar_menu",
@@ -15,7 +19,9 @@ export default {
     };
   },
   components: {
-    step_1
+    Step1,
+    Step2,
+    Step3
   }
 };
 </script>
@@ -29,16 +35,20 @@ body {
 
 /* First */
 ._1 {
-  margin: 0 2.5vw;
-  padding: 0 5vw;
+  padding: 3px 10vw;
   border-right: 1px solid silver;
   border-left: 1px solid silver;
+  background: white;
 }
 
 ._1_txt {
   font-family: Verdana;
-  font-size: 1rem;
+  font-size: 0.3rem;
   text-align: center;
+}
+
+.step:before {
+  background: white;
 }
 
 .step {
@@ -69,5 +79,20 @@ body {
 
 .step > .text > p {
   margin: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .txt_foot {
+    font-size: 1rem;
+  }
+  ._1_txt {
+    font-size: 1rem;
+  }
+  ._1 {
+    padding: 3px 10vw;
+  }
+  header > p {
+    font-size: 3rem;
+  }
 }
 </style>
