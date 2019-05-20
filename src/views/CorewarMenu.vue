@@ -34,22 +34,6 @@ body {
 }
 
 /* First */
-._1 {
-  padding: 3px 10vw;
-  border-right: 1px solid silver;
-  border-left: 1px solid silver;
-  background: white;
-}
-
-._1_txt {
-  font-family: Verdana;
-  font-size: 0.3rem;
-  text-align: center;
-}
-
-.step:before {
-  background: white;
-}
 
 .step {
   align-items: center;
@@ -89,7 +73,7 @@ body {
     font-size: 1rem;
   }
   ._1 {
-    padding: 3px 10vw;
+    padding: 10px 10vw;
   }
   header > p {
     font-size: 3rem;

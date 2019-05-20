@@ -3,7 +3,7 @@
     <tabs :items="Object.keys(images)" v-model="selected"></tabs>
     <!--@input="item => selected = item" :value="selected"-->
     <div id="galerie_1" class="galerie">
-      <transition-group name="list-complete">
+      <transition-group  :name="r_l_status" :key="selected" @after-leave="animate = false" @before-enter="animate = true">
         <img
           v-for="(image, i) in images[selected]"
           :key="image"
@@ -12,19 +12,13 @@
         />
       </transition-group>
       <span
-        @click="
-          index[selected] =
-            (index[selected] + images[selected].length - 1) %
-            images[selected].length
-        "
+        @click="slide_left"
         id="left"
         class="button"
         ><</span
       >
       <span
-        @click="
-          index[selected] = (index[selected] + 1) % images[selected].length
-        "
+        @click="slide_right"
         id="right"
         class="button"
         >></span
@@ -60,35 +54,56 @@ export default {
     return {
       index: { ASM: 0, VM: 0, Champions: 0 },
       selected: "ASM",
-      images
+      images,
+      animate: false,
+      r_l: false
     };
+  },
+  computed:{
+    r_l_status() {
+      return (this.r_l ? 'l-list-complete' : 'r-list-complete');
+    }  
   },
   components: {
     Tabs
+  },
+  methods: {
+    slide_left()
+    {
+      if (this.animate)
+        return;
+      this.r_l = true;
+      this.index[this.selected] = (this.index[this.selected] + this.images[this.selected].length - 1) % this.images[this.selected].length;
+
+    },
+    slide_right()
+    {
+      if (this.animate)
+        return;
+      this.r_l = false;
+      this.index[this.selected] = (this.index[this.selected] + 1) % this.images[this.selected].length
+    }
   }
 };
 </script>
 
 <style lang="stylus">
 
-.list-complete-item {
-  transition: all 1s;
-  display: inline-block;
-}
-.list-complete-enter, .list-complete-leave-to
-/* .list-complete-leave-active below version 2.1.8 */ {
+.r-list-complete-enter, .r-list-complete-leave-to {
+  transform: translate(-100%, 0%);
+  position: relative;
   opacity: 0;
 }
-.list-complete-leave, .list-complete-leave-active {
-  position: absolute;
+.l-list-complete-enter, .l-list-complete-leave-to {
+  transform: translate(100%, 0%);
+  position: relative;
+  opacity: 0;
 }
 
 ._2
 {
-    margin-top: 10px;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    padding-top: 10px;
+    background: white;
 }
 
 ._2:hover {
@@ -99,14 +114,18 @@ export default {
 }
 
 .galerie {
-    overflow: hidden;
     position: relative;
     width: 100%;
+    height: 90vh;
+    background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
     img {
+        position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         object-fit: cover;
-        transition: opacity 1s ease;
+        transition: transform 1s ease, opacity 1s ease;
     }
 }
 

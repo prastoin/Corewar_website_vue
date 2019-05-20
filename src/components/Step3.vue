@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="_3">
-      <div class="galerie">
+      <div class="video">
         <h1 id="_3title">But also a visualizer !</h1>
         <img
           src="https://previews.123rf.com/images/sergeyt/sergeyt1401/sergeyt140100378/25494427-les-graphismes-de-web-de-visualisateur-d-image-s%C3%A9rie-de-kiwi.jpg"
@@ -38,6 +38,13 @@ export default {
   text-align: center;
   animation-iteration-count: 1;
   animation-direction: alternate;
+}
+
+.video img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 1s ease;
 }
 
 @keyframes slidein {
