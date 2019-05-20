@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/corewar">Corewar</router-link> |
-      <router-link to="/hello">Hello</router-link>
+      <router-link to="/hello">Hello</router-link> |
+      <router-link to="/card">Hearthstone</router-link>
     </div>
     <router-view />
   </div>
@@ -21,4 +22,9 @@
     color #2c3e50
     &.router-link-exact-active
       color #42b983
+* { 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 </style>

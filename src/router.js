@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Corewar from "./views/CorewarMenu.vue";
 import Hello from "./components/HelloWorld.vue";
+import Cards from "./views/cards.vue";
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: "/hello",
       name: "Hello",
       component: Hello
+    },
+    {
+      path: "/card",
+      name: "Card",
+      component: Cards
     }
     /*{
       path: "/about",
