@@ -1,5 +1,5 @@
 <template>
-    <div id="root">
+    <div id="root-1">
     <div id="container">
         <div id="card"></div>
     </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-#root {
+#root-1 {
     height: 50vh;
 }
 

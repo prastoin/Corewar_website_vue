@@ -1,23 +1,13 @@
 <template>
-  <div>
     <div class="_3">
-      <div class="video">
-        <h1 id="_3title">But also a visualizer !</h1>
+       <h1 id="_3title">But also a visualizer !</h1>
+       <div class="video">
         <img
           src="https://previews.123rf.com/images/sergeyt/sergeyt1401/sergeyt140100378/25494427-les-graphismes-de-web-de-visualisateur-d-image-s%C3%A9rie-de-kiwi.jpg"
           alt=""
         />
       </div>
     </div>
-    <footer>
-      <nav class="txt_foot">
-        <p>Contact</p>
-        <p>About us</p>
-        <p>Things</p>
-        <p>NON</p>
-      </nav>
-    </footer>
-  </div>
 </template>
 
 <script>
@@ -40,6 +30,11 @@ export default {
   animation-direction: alternate;
 }
 
+.video {
+  width: 100%;
+  height: 100vh;
+}
+
 .video img {
   width: 100vw;
   height: 100vh;
@@ -57,23 +52,5 @@ export default {
     margin-left: 0%;
     width: 100%;
   }
-}
-
-/* footer */
-
-.txt_foot {
-  display: flex;
-  justify-content: center;
-  font-size: 0.5rem;
-  font-family: Verdana;
-}
-
-.txt_foot > p {
-  margin-left: 5px;
-}
-
-.txt_foot > p:not(:last-child) {
-  padding-right: 5px;
-  border-right: 2px solid black;
 }
 </style>

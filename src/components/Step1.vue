@@ -1,10 +1,6 @@
 <template>
-  <div>
-    <header>
-      <p>What is Corewar ?</p>
-    </header>
-    <main class="root">
-      <div class="_1">
+    <div id="lines">
+    <div class="_1">
         <div class="step">
           <div class="img">
             <transition appear name="fade">
@@ -73,8 +69,7 @@
           </div>
         </div>
         </div>
-    </main>
-  </div>
+        </div>
 </template>
 
 <script>
@@ -97,17 +92,9 @@ export default {
   padding-top: 10px;
 }
 
-header {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-header > p {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.1rem;
-  margin: 20px;
+#lines {
+  padding: 3px 5vw;
+  background: white;
 }
 
 ._1 {

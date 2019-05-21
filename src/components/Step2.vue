@@ -1,7 +1,6 @@
 <template>
   <div class="_2">
-    <tabs :items="Object.keys(images)" v-model="selected"></tabs>
-    <!--@input="item => selected = item" :value="selected"-->
+    <tabs :items="Object.keys(images)" v-model="selected"></tabs> <!--@input="item => selected = item" :value="selected"-->
     <div id="galerie_1" class="galerie">
       <transition-group  :name="r_l_status" :key="selected" @after-leave="animate = false" @before-enter="animate = true">
         <img
@@ -11,6 +10,14 @@
           v-show="index[selected] === i"
         />
       </transition-group>
+      <div class="nav-bar">
+        <button 
+        v-for="(valeur, n) in images[selected]" 
+        :key="n"
+        :id="n"
+        @click="goto(n)" 
+        :class="{active: n === index[selected]}"/>
+      </div>
       <span
         @click="slide_left"
         id="left"
@@ -61,13 +68,20 @@ export default {
   },
   computed:{
     r_l_status() {
-      return (this.r_l ? 'l-list-complete' : 'r-list-complete');
+      return (this.r_l ? 'l-slide' : 'r-slide');
     }  
   },
   components: {
     Tabs
   },
   methods: {
+    goto (n)
+    {
+      if (this.animate)
+        return;
+      this.r_l = n < this.index[this.selected] ? true : false;
+      this.index[this.selected] = n;
+    },
     slide_left()
     {
       if (this.animate)
@@ -89,15 +103,41 @@ export default {
 
 <style lang="stylus">
 
-.r-list-complete-enter, .r-list-complete-leave-to {
-  transform: translate(-100%, 0%);
-  position: relative;
-  opacity: 0;
+
+.r-slide-enter-active {
+  animation: slideInRight 0.5s;
 }
-.l-list-complete-enter, .l-list-complete-leave-to {
-  transform: translate(100%, 0%);
-  position: relative;
-  opacity: 0;
+
+.r-slide-leave-active {
+  animation: slideOutRight 0.5s;
+}
+
+.l-slide-enter-active {
+  animation: slideInLeft 0.5s;
+}
+
+.l-slide-leave-active {
+  animation: slideOutLeft 0.5s;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOutLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
 }
 
 ._2
@@ -110,6 +150,9 @@ export default {
     #left,
     #right {
         opacity: 1;
+    }
+    .nav-bar button {
+      opacity: 0.8;
     }
 }
 
@@ -125,9 +168,11 @@ export default {
         width: 100vw;
         height: 100%;
         object-fit: cover;
-        transition: transform 1s ease, opacity 1s ease;
+//        transition: transform 1s ease, opacity 1s ease;
     }
 }
+
+/* Clickable*/
 
 #left {
     top: 47.5%;
@@ -141,6 +186,27 @@ export default {
     margin-right: 20px;
     top: 47.5%;
     right: 0;
+}
+
+.nav-bar {
+  position absolute;
+  text-align: center;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  button {
+    margin: 0px 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+  }
+  button.active {
+    background-color: #FFF;
+  }
 }
 
 .button {
