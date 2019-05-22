@@ -14,7 +14,6 @@
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   color #2c3e50
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
 #nav
   a

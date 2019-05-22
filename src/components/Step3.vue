@@ -36,7 +36,7 @@ export default {
 }
 
 .video img {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   transition: opacity 1s ease;

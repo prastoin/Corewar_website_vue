@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div id="root">
     <header>
       <p>What is Corewar ?</p>
     </header>
     <Step1></Step1>
     <Step2></Step2>
     <Step3></Step3>
+    <Step4></Step4>
     <Card></Card>
     <footer>
       <nav class="txt_foot">
@@ -22,6 +23,7 @@
 import Step1 from "../components/Step1.vue";
 import Step2 from "../components/Step2.vue";
 import Step3 from "../components/Step3.vue";
+import Step4 from "../components/Step4.vue";
 import Card from "../views/cards.vue"
 
 // @ is an alias to /src
@@ -36,17 +38,21 @@ export default {
     Step1,
     Step2,
     Step3,
+    Step4,
     Card
-    
   }
 };
 </script>
 
 <style>
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#root {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* Header*/
