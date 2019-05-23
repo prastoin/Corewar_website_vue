@@ -35,12 +35,12 @@ export default {
 
 .video {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
 }
 
 .video iframe {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   transition: opacity 1s ease;
 }

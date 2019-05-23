@@ -1,5 +1,6 @@
 <template>
   <div style="position: relative; display: flex; justify-content: center;">
+    <h2 class="title_2">Link below</h2>
     <div class="_4">
       <a class="link" href="https://corewar.netlify.com" target="_blank">
         <iframe class="front" src="https://corewar.netlify.com"></iframe>
@@ -36,6 +37,16 @@ export default {
     cursor: pointer;
     position absolute;
     top: 49%;
+}
+
+.title_2 {
+  text-align: center;
+  width : 100vw;
+    position: absolute;
+    background: silver
+    z-index: 4;
+    font-size: 1.5rem;
+    color: #7A7A7A;
 }
 
 .front {
