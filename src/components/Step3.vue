@@ -1,13 +1,15 @@
 <template>
-    <div class="_3">
-       <h1 id="_3title">But also a visualizer !</h1>
-       <div class="video">
-        <img
-          src="https://previews.123rf.com/images/sergeyt/sergeyt1401/sergeyt140100378/25494427-les-graphismes-de-web-de-visualisateur-d-image-s%C3%A9rie-de-kiwi.jpg"
-          alt=""
-        />
-      </div>
+  <div class="_3">
+    <h1 id="_3title">But also a visualizer !</h1>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/XMCyfFIWIo0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
+  </div>
 </template>
 
 <script>
@@ -20,6 +22,7 @@ export default {
 ._3 {
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 #_3title {
@@ -35,7 +38,7 @@ export default {
   height: 100vh;
 }
 
-.video img {
+.video iframe {
   width: 100%;
   height: 100vh;
   object-fit: cover;

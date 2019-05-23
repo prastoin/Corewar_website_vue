@@ -1,8 +1,14 @@
 <template>
   <div class="_2">
-    <tabs :items="Object.keys(images)" v-model="selected"></tabs> <!--@input="item => selected = item" :value="selected"-->
+    <tabs :items="Object.keys(images)" v-model="selected"></tabs>
+    <!--@input="item => selected = item" :value="selected"-->
     <div id="galerie_1" class="galerie">
-      <transition-group  :name="r_l_status" :key="selected" @after-leave="animate = false" @before-enter="animate = true">
+      <transition-group
+        :name="r_l_status"
+        :key="selected"
+        @after-leave="animate = false"
+        @before-enter="animate = true"
+      >
         <img
           v-for="(image, i) in images[selected]"
           :key="image"
@@ -11,25 +17,16 @@
         />
       </transition-group>
       <div class="nav-bar">
-        <button 
-        v-for="(valeur, n) in images[selected]" 
-        :key="n"
-        :id="n"
-        @click="goto(n)" 
-        :class="{active: n === index[selected]}"/>
+        <button
+          v-for="(valeur, n) in images[selected]"
+          :key="n"
+          :id="n"
+          @click="goto(n)"
+          :class="{ active: n === index[selected] }"
+        />
       </div>
-      <span
-        @click="slide_left"
-        id="left"
-        class="button"
-        ><</span
-      >
-      <span
-        @click="slide_right"
-        id="right"
-        class="button"
-        >></span
-      >
+      <span @click="slide_left" id="left" class="button">&lt;</span>
+      <span @click="slide_right" id="right" class="button">&gt;</span>
     </div>
   </div>
 </template>
@@ -66,36 +63,32 @@ export default {
       r_l: false
     };
   },
-  computed:{
+  computed: {
     r_l_status() {
-      return (this.r_l ? 'l-slide' : 'r-slide');
-    }  
+      return this.r_l ? "l-slide" : "r-slide";
+    }
   },
   components: {
     Tabs
   },
   methods: {
-    goto (n)
-    {
-      if (this.animate)
-        return;
+    goto(n) {
+      if (this.animate) return;
       this.r_l = n < this.index[this.selected] ? true : false;
       this.index[this.selected] = n;
     },
-    slide_left()
-    {
-      if (this.animate)
-        return;
+    slide_left() {
+      if (this.animate) return;
       this.r_l = true;
-      this.index[this.selected] = (this.index[this.selected] + this.images[this.selected].length - 1) % this.images[this.selected].length;
-
+      this.index[this.selected] =
+        (this.index[this.selected] + this.images[this.selected].length - 1) %
+        this.images[this.selected].length;
     },
-    slide_right()
-    {
-      if (this.animate)
-        return;
+    slide_right() {
+      if (this.animate) return;
       this.r_l = false;
-      this.index[this.selected] = (this.index[this.selected] + 1) % this.images[this.selected].length
+      this.index[this.selected] =
+        (this.index[this.selected] + 1) % this.images[this.selected].length;
     }
   }
 };
@@ -183,7 +176,7 @@ export default {
 
 #right {
     opacity: 0;
-    margin-right: 20px;
+    margin-right: 10px;
     top: 47.5%;
     right: 0;
 }

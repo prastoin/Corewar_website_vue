@@ -1,21 +1,21 @@
 <template>
+  <div style="position: relative; display: flex; justify-content: center;">
     <div class="_4">
-        <div class="parallax">
-            <div class="padd parallax_layer parallax_layer-base">
-                <img class="front" src="./img.png" alt="">
-            </div>
-            <div class="padd parallax_layer parallax_layer-back">
-                <div id="front" class="title">For</div>
-            </div>
-
-        </div>
-    </div>    
+      <a class="link" href="https://corewar.netlify.com" target="_blank">
+        <iframe class="front" src="https://corewar.netlify.com"></iframe>
+        <div class="blocker"></div>
+      </a>
+    </div>
+    <a class="title" href="https://corewar.netlify.com" target="blank"
+      >corewar.netlify.com</a
+    >
+  </div>
 </template>
 
 <script>
 export default {
-    name:"corewar-link"
-}
+  name: "corewar-link"
+};
 //               <p class="static">LINK TO THE WEBSITE</p>
 </script>
 
@@ -24,58 +24,36 @@ export default {
     background: white;
     width: 100%;
     height: 50vh;
-    position: relative;
-}
-
-#front {
-    font-size: 2rem;
-    color: black;
-}
-
-#back {
-    width: 1000%;
-    background-image: url(img.png);
+    transform: translateZ(-0.1px) scale(1.1);
+    transform-style: preserve-3d;
 }
 
 .title {
+    background: silver
+    border-radius: 7px;
+    font-size: 1.5rem;
+    color: #7A7A7A;
+    cursor: pointer;
+    position absolute;
+    top: 49%;
+}
+
+.front {
+    width: 100%;
+    height: 59vh;
+    margin-top: -6.8vh;
+}
+
+.link {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.blocker {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.parallax {
-    perspective: 1px;
-    height: 50vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.parallax_layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.padd {
-    padding-top: 50vh;
-    padding-right: 0px;
-    padding-bottom: 50vh;
-    padding-left: 0px;
-}
-
-.parallax_layer-base {
-  transform: translateZ(0);
-}
-
-.parallax_layer-back {
-  transform: translateZ(-1px);
-} 
-
-.flou {
-    filter: blur(4px);
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 </style>

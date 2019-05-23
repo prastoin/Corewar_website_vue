@@ -24,7 +24,7 @@ import Step1 from "../components/Step1.vue";
 import Step2 from "../components/Step2.vue";
 import Step3 from "../components/Step3.vue";
 import Step4 from "../components/Step4.vue";
-import Card from "../views/cards.vue"
+import Card from "../views/cards.vue";
 
 // @ is an alias to /src
 export default {
