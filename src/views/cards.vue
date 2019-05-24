@@ -31,7 +31,7 @@ const HS_imgs = [
 
 <style scoped>
 #root-1 {
-  height: 35vh;
+  height: 40vh;
 }
 
 #container {

@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Corewar from "./views/CorewarMenu.vue";
 import Hello from "./components/HelloWorld.vue";
 import Cards from "./views/cards.vue";
+import Bubble from "./components/bubble.vue";
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: "/card",
       name: "Card",
       component: Cards
+    },
+    {
+      path: "/bubble",
+      name: "bubble",
+      component: Bubble
     }
     /*{
       path: "/about",

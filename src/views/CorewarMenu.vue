@@ -1,5 +1,6 @@
 <template>
   <div id="root">
+    <bubble></bubble>
     <header>
       <p class="step-title">What is Corewar ?</p>
     </header>
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import bubble from "../components/bubble.vue";
 import Step1 from "../components/Step1.vue";
 import Step2 from "../components/Step2.vue";
 import Step3 from "../components/Step3.vue";
@@ -34,6 +36,7 @@ export default {
     };
   },
   components: {
+    bubble,
     Step1,
     Step2,
     Step3,
