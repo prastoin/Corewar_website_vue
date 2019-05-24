@@ -1,6 +1,6 @@
 <template>
   <div class="_3">
-    <h1 id="_3title">But also a visualizer !</h1>
+    <h1 id="_3title" class="step-title">But also a visualizer !</h1>
     <div class="video">
       <iframe
         src="https://www.youtube.com/embed/XMCyfFIWIo0"
@@ -9,6 +9,7 @@
         allowfullscreen
       ></iframe>
     </div>
+    <h2 class="title_2">Link below</h2>
   </div>
 </template>
 
@@ -25,6 +26,13 @@ export default {
   z-index: 2;
 }
 
+.title_2 {
+  text-align: center;
+  width: 100vw;
+  z-index: 4;
+  font-size: 2rem;
+}
+
 #_3title {
   animation-duration: 3s;
   animation-name: slidein;
@@ -34,7 +42,8 @@ export default {
 }
 
 .video {
-  width: 100%;
+  margin-left: 10%;
+  width: 80%;
   height: 70vh;
 }
 

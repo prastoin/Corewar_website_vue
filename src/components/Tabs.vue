@@ -31,23 +31,18 @@ ul {
 }
 
 li {
-  align-self: left;
+  transition: all 0.5s ease;
   display: inline-block;
   padding: 10px;
   border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
 }
 
 li:hover {
   cursor: pointer;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  transition-duration: 0, 5s;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 li.active {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: rgba(255, 255, 255, 0.8);
 }
 </style>

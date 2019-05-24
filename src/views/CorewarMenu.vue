@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <header>
-      <p>What is Corewar ?</p>
+      <p class="step-title">What is Corewar ?</p>
     </header>
     <Step1></Step1>
     <Step2></Step2>
@@ -12,8 +12,7 @@
       <nav class="txt_foot">
         <p>Contact</p>
         <p>About us</p>
-        <p>Things</p>
-        <p>NON</p>
+        <p>Github</p>
       </nav>
     </footer>
   </div>
@@ -44,7 +43,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="stylus">
+
+@import "../stylus/theme.styl"
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +54,7 @@ export default {
 }
 
 #root {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: $colors.fond;
 }
 
 /* Header*/
@@ -63,7 +65,7 @@ header {
   justify-content: center;
 }
 
-header > p {
+.step-title {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.1rem;
   margin: 20px;
@@ -77,6 +79,9 @@ header > p {
 }
 
 .txt_foot > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
   margin-left: 5px;
 }
 
@@ -104,7 +109,7 @@ header > p {
 
 .step .text {
   box-sizing: border-box;
-  background: #f5f5f5;
+  background: rgba(255, 255, 255, 0.1);
   text-align: center;
   width: 50%;
   padding-left: 10px;
@@ -113,6 +118,9 @@ header > p {
 }
 
 .step > .text > p {
+  line-height: 150%;
+  padding-top: 5px;
+  text-align: left;
   margin: 0;
 }
 
@@ -126,7 +134,7 @@ header > p {
   ._1 {
     padding: 10px 10vw;
   }
-  header > p {
+  .step-title {
     font-size: 3rem;
   }
 }

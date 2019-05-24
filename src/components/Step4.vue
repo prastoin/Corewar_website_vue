@@ -1,9 +1,10 @@
 <template>
-  <div style="position: relative; display: flex; justify-content: center;">
-    <h2 class="title_2">Link below</h2>
+  <div
+    style="overflow: hidden; position: relative; display: flex; justify-content: center;"
+  >
     <div class="_4">
       <a class="link" href="https://corewar.netlify.com" target="_blank">
-        <iframe class="front" src="https://corewar.netlify.com"></iframe>
+        <img class="front" src="../../public/img.png" />
         <div class="blocker"></div>
       </a>
     </div>
@@ -24,8 +25,8 @@ export default {
 ._4 {
     background: white;
     width: 100%;
-    height: 50vh;
-    transform: translateZ(-0.1px) scale(1.1);
+    height: 40vh;
+    transform: translateZ(-1px) scale(2);
     transform-style: preserve-3d;
 }
 
@@ -39,20 +40,11 @@ export default {
     top: 49%;
 }
 
-.title_2 {
-  text-align: center;
-  width : 100vw;
-    position: absolute;
-    background: silver
-    z-index: 4;
-    font-size: 1.5rem;
-    color: #7A7A7A;
-}
-
 .front {
     width: 100%;
-    height: 59vh;
-    margin-top: -6.8vh;
+    height: 90vh;
+    margin-top: -20vh;
+    object-fit: cover;
 }
 
 .link {

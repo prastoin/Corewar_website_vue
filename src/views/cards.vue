@@ -31,7 +31,7 @@ const HS_imgs = [
 
 <style scoped>
 #root-1 {
-  height: 50vh;
+  height: 35vh;
 }
 
 #container {
@@ -66,5 +66,33 @@ const HS_imgs = [
 
 #root-1:hover .card {
   transform: rotatex(0deg);
+}
+
+@media screen and (max-width: 684px) {
+  .card {
+    width: calc(230px / 1.5);
+    height: calc(330px / 1.5);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: calc(230px / 1.7);
+    height: calc(330px / 1.7);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card {
+    width: calc(230px / 2);
+    height: calc(330px / 2);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    width: calc(230px / 3);
+    height: calc(330px / 3);
+  }
 }
 </style>
