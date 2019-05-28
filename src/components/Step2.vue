@@ -151,6 +151,7 @@ export default {
 }
 
 .galerie {
+    z-index: 6;
     position: relative;
     width: 100%;
     height: 80vh;

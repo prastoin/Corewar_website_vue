@@ -1,13 +1,15 @@
 <template>
   <div id="root">
     <header>
-      <p class="step-title">What is Corewar ?</p>
+      <p class="step-title" style="text-decoration: underline overline;">
+        What is Corewar ?
+      </p>
     </header>
     <Step1></Step1>
     <Step2></Step2>
-    <Step3></Step3>
     <Step4></Step4>
-    <Card></Card>
+    <Step3></Step3>
+    <Card class="HS"></Card>
     <footer>
       <nav class="txt_foot">
         <p>Contact</p>
@@ -15,6 +17,7 @@
         <p>Github</p>
       </nav>
     </footer>
+    <Bubble></Bubble>
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import Step2 from "../components/Step2.vue";
 import Step3 from "../components/Step3.vue";
 import Step4 from "../components/Step4.vue";
 import Card from "../views/cards.vue";
+import Bubble from "../components/bubble.vue";
 
 // @ is an alias to /src
 export default {
@@ -38,7 +42,8 @@ export default {
     Step2,
     Step3,
     Step4,
-    Card
+    Card,
+    Bubble
   }
 };
 </script>
@@ -55,6 +60,8 @@ export default {
 
 #root {
   background-image: $colors.fond;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Header*/
@@ -122,6 +129,10 @@ header {
   padding-top: 5px;
   text-align: left;
   margin: 0;
+}
+
+.HS {
+  z-index: 99;
 }
 
 @media screen and (min-width: 576px) {

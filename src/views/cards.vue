@@ -1,24 +1,35 @@
 <template>
   <div id="root-1">
-    <div id="container">
-      <div
-        v-for="hs_pic in HS_imgs"
-        class="card"
-        :style="hs_pic"
-        :id="hs_pic"
-        :key="hs_pic"
-      ></div>
-    </div>
+    <intersect
+      @enter="status = 'transform: rotatex(0deg);'"
+      @leave="status = ''"
+    >
+      <div id="container">
+        <div
+          v-for="hs_pic in HS_imgs"
+          class="card"
+          :style="status + hs_pic"
+          :id="hs_pic"
+          :key="hs_pic"
+        ></div>
+      </div>
+    </intersect>
   </div>
 </template>
 
 <script>
+import Intersect from "vue-intersect";
+
 export default {
   name: "card",
   data() {
     return {
+      status: "",
       HS_imgs
     };
+  },
+  components: {
+    Intersect
   }
 };
 
@@ -36,6 +47,8 @@ const HS_imgs = [
 
 #container {
   overflow: hidden;
+  position: relative;
+  z-index: 6;
   align-items: center;
   display: flex;
   justify-content: center;

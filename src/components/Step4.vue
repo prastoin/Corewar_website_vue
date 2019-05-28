@@ -1,6 +1,6 @@
 <template>
   <div
-    style="overflow: hidden; position: relative; display: flex; justify-content: center;"
+    style="overflow: hidden; position: relative; width: 100vw; margin-top: 20px; display: flex"
   >
     <div class="_4">
       <a class="link" href="https://corewar.netlify.com" target="_blank">
@@ -9,7 +9,7 @@
       </a>
     </div>
     <a class="title" href="https://corewar.netlify.com" target="blank"
-      >corewar.netlify.com</a
+      >But also a visualizer !</a
     >
   </div>
 </template>
@@ -18,26 +18,29 @@
 export default {
   name: "corewar-link"
 };
-//               <p class="static">LINK TO THE WEBSITE</p>
 </script>
 
 <style scoped lang="stylus">
 ._4 {
+    z-index: 6;
     background: white;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     transform: translateZ(-1px) scale(2);
     transform-style: preserve-3d;
 }
 
 .title {
-    background: silver
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #7A7A7A;
     cursor: pointer;
     position absolute;
-    top: 49%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .front {
