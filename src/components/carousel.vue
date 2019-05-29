@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import Tabs from "./tabs.vue";
+import Tabs from "./tabsCarousel.vue";
 
 const images = {
   ASM: [
