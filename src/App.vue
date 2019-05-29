@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/corewar">Corewar</router-link> |
-      <router-link to="/hello">Hello</router-link> |
-      <router-link to="/card">Hearthstone</router-link> |
-      <router-link to="/bubble">bubble</router-link>
-    </div>
+    <div id="nav"></div>
     <router-view />
   </div>
 </template>

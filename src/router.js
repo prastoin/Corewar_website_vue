@@ -1,9 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Corewar from "./views/CorewarMenu.vue";
-import Hello from "./components/HelloWorld.vue";
-import Cards from "./views/cards.vue";
-import Bubble from "./components/bubble.vue";
 
 Vue.use(Router);
 
@@ -12,11 +9,11 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/corewar",
+      path: "/",
       name: "Corewar_menu",
       component: Corewar
-    },
-    {
+    }
+    /*    {
       path: "/hello",
       name: "Hello",
       component: Hello
@@ -30,7 +27,7 @@ export default new Router({
       path: "/bubble",
       name: "bubble",
       component: Bubble
-    }
+    }*/
     /*{
       path: "/about",
       name: "about",

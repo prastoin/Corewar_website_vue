@@ -5,10 +5,10 @@
         What is Corewar ?
       </p>
     </header>
-    <Step1></Step1>
-    <Step2></Step2>
-    <Step4></Step4>
-    <Step3></Step3>
+    <ProjectDescription></ProjectDescription>
+    <Carousel></Carousel>
+    <Parallax></Parallax>
+    <Visualizer></Visualizer>
     <Card class="HS"></Card>
     <footer>
       <nav class="txt_foot">
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import Step1 from "../components/Step1.vue";
-import Step2 from "../components/Step2.vue";
-import Step3 from "../components/Step3.vue";
-import Step4 from "../components/Step4.vue";
-import Card from "../views/cards.vue";
+import ProjectDescription from "../components/projectDescription.vue";
+import Carousel from "../components/carousel.vue";
+import Visualizer from "../components/visualizer.vue";
+import Parallax from "../components/parallax.vue";
+import Card from "../components/cards.vue";
 import Bubble from "../components/bubble.vue";
 
 // @ is an alias to /src
@@ -38,10 +38,10 @@ export default {
     };
   },
   components: {
-    Step1,
-    Step2,
-    Step3,
-    Step4,
+    ProjectDescription,
+    Carousel,
+    Parallax,
+    Visualizer,
     Card,
     Bubble
   }

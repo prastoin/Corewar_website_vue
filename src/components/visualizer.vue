@@ -2,7 +2,7 @@
   <div class="_3">
     <div
       id="video-desc"
-      style="display: flex; flex-direction: column; width: 100%;"
+      style="display: flex; flex-direction: column; width: 50%; padding-left: 1%; padding-top: 1%; padding-bottom: 1%;"
     >
       <intersect @enter="status = ' active'">
         <div :class="'video_txt' + status">
@@ -19,13 +19,15 @@
         OUi OUI il existe un visu 2D bcp plus beau que le 3D
       </div>
     </div>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/XMCyfFIWIo0?rel=0"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="videoBack">
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/XMCyfFIWIo0?rel=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
@@ -48,7 +50,6 @@ export default {
 
 <style scoped>
 ._3 {
-  padding: 20px;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -68,6 +69,24 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+}
+
+.videoBack {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  z-index: 4;
+  position: relative;
+}
+
+.video {
+  padding: 2%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(to right, #2c5364, #203a43, #2c5364);
 }
 
 .active {
@@ -104,16 +123,11 @@ export default {
   animation-direction: alternate;
 }
 
-.video {
-  align-self: left;
-  width: 100%;
-  height: 100%;
-}
-
-.video iframe {
+.videoBack iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 9;
   transition: opacity 1s ease;
 }
 
