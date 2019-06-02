@@ -12,9 +12,8 @@
     <Card class="HS"></Card>
     <footer>
       <nav class="txt_foot">
-        <p>Contact</p>
-        <p>About us</p>
-        <p>Github</p>
+        <a href="mailto:prastoin@student.42.fr">Contact</a>
+        <a href="https://github.com/Tkesray/corewar">Github_repo</a>
       </nav>
     </footer>
     <Bubble></Bubble>
@@ -85,14 +84,16 @@ header {
   font-family: Verdana;
 }
 
-.txt_foot > p {
+.txt_foot > a {
+  color: black;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1rem;
   margin-left: 5px;
+  text-decoration: none;
 }
 
-.txt_foot > p:not(:last-child) {
+.txt_foot > a:not(:last-child) {
   padding-right: 5px;
   border-right: 2px solid black;
 }

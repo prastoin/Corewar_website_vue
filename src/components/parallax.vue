@@ -8,9 +8,18 @@
         <div class="blocker"></div>
       </a>
     </div>
-    <a class="title" href="https://corewar.netlify.com" target="blank"
-      >But also a visualizer !</a
-    >
+    <div class="title">
+      <a id="butAlso" href="https://corewar.netlify.com" target="blank"
+        >But also a visualizer !</a
+      >
+      <a
+        id="link"
+        href="https://corewar.netlify.com"
+        target="blank"
+        style="font-size: 0.8rem;"
+        >https://corewar.netlify.com</a
+      >
+    </div>
   </div>
 </template>
 
@@ -31,11 +40,21 @@ export default {
 }
 
 .title {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     z-index: 999;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 1);
     border-radius: 7px;
-    font-size: 3rem;
-    color: #7A7A7A;
+    #butAlso {
+      font-size: 3rem;
+      color: #7A7A7A;
+      font-weight: bold;
+    }
+    #link {
+      color: #7A7A7A;
+      font-size: 0.9rem;
+    }
     cursor: pointer;
     position absolute;
     top: 50%;
