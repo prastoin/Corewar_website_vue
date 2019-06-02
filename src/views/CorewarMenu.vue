@@ -116,7 +116,7 @@ header {
 
 .step .text {
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   text-align: center;
   width: 50%;
   padding-left: 10px;
@@ -147,9 +147,6 @@ header {
   }
   .step-title {
     font-size: 3rem;
-  }
-  .video_txt {
-    font-size: 1rem;
   }
 }
 </style>

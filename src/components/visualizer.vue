@@ -62,7 +62,7 @@ export default {
   margin: 0 10%;
   justify-self: baseline;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   text-align: center;
   font-size: 0.8rem;
   width: auto;
