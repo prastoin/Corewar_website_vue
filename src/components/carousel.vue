@@ -41,12 +41,7 @@ const images = {
     "/carousel/asm_disasm.png",
     "/carousel/asm_bonus.png"
   ],
-  VM: ["/carousel/vm_argsusage.png", "/carousel/vm_mainLoop.png"],
-  Champions: [
-    "https://images.pexels.com/photos/751373/pexels-photo-751373.jpeg?auto=compress&cs=tinysrgb&dpr=1&wi500",
-    "https://is5-ssl.mzstatic.com/image/thumb/Music5/v4/2e/b3/11/2eb31109-6bee-ce77-2d54-9d9a5b97e4c7/dj.igrgkhwb.jpg/1200x630bb.jpg",
-    "http://lh3.googleusercontent.com/bE7Lcs7NmP71xdDZ2u3VtsYF2WD4vikdmebybZgvdrZIGHiwD1dFEwqIUqFyDE9krg=w300"
-  ]
+  VM: ["/carousel/vm_argsusage.png", "/carousel/vm_mainLoop.png"]
 };
 
 export default {

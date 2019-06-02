@@ -64,6 +64,7 @@ export default {
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.1);
   text-align: center;
+  font-size: 0.8rem;
   width: auto;
   opacity: 0;
   padding-left: 10px;
@@ -140,6 +141,12 @@ export default {
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .video_txt {
+    font-size: 1rem;
   }
 }
 </style>

@@ -148,5 +148,8 @@ header {
   .step-title {
     font-size: 3rem;
   }
+  .video_txt {
+    font-size: 1rem;
+  }
 }
 </style>
