@@ -1,4 +1,4 @@
-# corewar_website_vue
+# corewar_website_vue [https://corewar.prastoin.me]
 
 ## Project setup
 ```
