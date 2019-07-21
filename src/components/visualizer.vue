@@ -6,17 +6,15 @@
     >
       <intersect @enter="status = ' active'">
         <div :class="'video_txt' + status">
-          CECI EST UN TEXTE<br />
-          je m'appelle David est j'ai utiliser cet outil de professionel
+          Web Assembly<br />
+          The wasm is use to make our C code readable by browsers. Then we had
+          to recode in javascript a new Virtual Machine that is able to play
+          with the wasm.
         </div>
       </intersect>
       <div :class="'video_txt' + status" style="animation-delay: 0.50s;">
-        CECI EST UN TEXTE<br />
-        Voici comment acceder au tutoriel !.
-      </div>
-      <div :class="'video_txt' + status" style="animation-delay: 1s;">
-        CECI EST UN TEXTE<br />
-        OUi OUI il existe un visu 2D bcp plus beau que le 3D
+        Three.js<br />
+        Three.js is the lib we use for the 3D canvas and to create the Torus.
       </div>
     </div>
     <div class="videoBack">

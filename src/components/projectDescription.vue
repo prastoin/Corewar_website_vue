@@ -11,12 +11,12 @@
           <h1>An ASM compiler:</h1>
           <p>
             The ASM, for assembler, is one of the two .exe in the project.<br />
-            He’s a compiler, his goal is to convert “.s” file, in a school made
-            assembly language (see below) into binaries files “.cor” file that
-            is readable by the Virtual Machine.<br />
+            It’s a compiler, his goal is to convert “.s” file, in a school made
+            assembly language (see below) into binaries files “.cor” files that
+            are readable by the Virtual Machine.<br />
             There’s two parts to parse for the asm, the header and then the
             prog.<br />
-            In the prog different kinds of informations can be found,
+            In the prog differents kinds of informations can be found,
             instructions, labels, arguments.<br />
             To manage with that we’re using a hash table, also we’ve implemented
             a code span error management, based on rust one.<br />
@@ -28,18 +28,17 @@
           <h1>A Virtual Machine:</h1>
           <p>
             The virtual machine, the second .exe, is the arena, where everything
-            takes sense, rules that found the games are check by the vm.<br />
+            takes sense, rules that found the games are checked by the vm.<br />
             Each .cor given by args to the vm are proportionally loaded in the
             memory.<br />
             Processes are reading the circular memory and applying the
             instructions they receive.<br />
-            The main instruction is “live”: champion’s number, if the num is not
-            a valid it goes to the void.<br />
+            The main instruction is “live: champion’s number", if the num is not
+            valid it goes to the void.<br />
             A process dies if he doesn’t call a live in CYCLE_TO_DIE cycles.<br />
-            During a cycle all processes play once.<br />
-            When all processes are dead, last calling live champions is check to
-            elect a winner.<br />
-            Check ASM carousel below to see all instruction and some codes.<br />
+            During a cycle all processes are playing once time.<br />
+            When all processes are dead, last calling live champions is checked
+            to elect a winner.<br />
           </p>
         </div>
         <div class="img">
@@ -67,15 +66,15 @@
         <div class="text _1_txt">
           <h1>Champions:</h1>
           <p>
-            Each champions have the same goal, staying alive by calling live for
-            their own numbers player, by the way the number player is given
-            either by the user or randomly.<br />
+            Each champions have the same goal, to stay alive by calling the live
+            instruction for their own player's number, by the way the player's
+            number is given either by the user or randomly.<br />
             There is a real distinction between champions and processes,
             processes are independents of champions.<br />
-            At the begin of the game a process spawn at the start of each
+            At the begining of the game a process spawns at the start of each
             champions’prog loaded in the memory.<br />
             But they’re not assigned to their starting champ, they might read an
-            enemy prog after during the game.<br />
+            enemy prog later during the game.<br />
             In .s file you can find 4 kinds of instructions: Movement (zjmp),
             writing (sti st ..), loading (fork ld ldi ..), operators (add sub
             ..).<br />
