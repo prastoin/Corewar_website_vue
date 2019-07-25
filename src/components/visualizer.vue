@@ -8,13 +8,13 @@
         <div :class="'video_txt' + status">
           Web Assembly<br />
           The wasm is use to make our C code readable by browsers. Then we had
-          to recode in javascript a new Virtual Machine that is able to play
-          with the wasm.
+          to recode in javascript a new Virtual Machine able to play with the
+          wasm.
         </div>
       </intersect>
       <div :class="'video_txt' + status" style="animation-delay: 0.50s;">
         Three.js<br />
-        Three.js is the lib we use for the 3D canvas and to create the Torus.
+        Three.js is the lib we've used for the 3D canvas and the Torus creation.
       </div>
     </div>
     <div class="videoBack">
